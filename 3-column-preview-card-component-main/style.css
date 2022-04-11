@@ -75,9 +75,38 @@ body {
 }
 
 .suvs .btn {
-    color: hsl(184, 100%, 22%);
+  color: hsl(184, 100%, 22%);
 }
 
 .luxury .btn {
-    color: hsl(179, 100%, 13%);
+  color: hsl(179, 100%, 13%);
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 0fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "sedans suvs luxury"
+      "attribution attribution attribution";
+    margin: 170px 255px 0;
+  }
+
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .paragraph {
+    margin: 20px 0 70px 0;
+  }
+
+  .attribution {
+    text-align: center;
+  }
 }
